@@ -33,7 +33,7 @@
         <Button x:Name="percentButton" Content="%" Grid.Row="1" Grid.Column="2" Margin="5"/>
         <Button x:Name="divideButton" Content="/" Grid.Row="1" Grid.Column="3" Margin="5"/>
         <!---Second row of buttons-->
-        <Button x:Name="sevenButton" Content="7" Grid.Row="2" Margin="5"/>
+        <Button x:Name="sevenButton" Content="7" Grid.Row="2" Margin="5" Click="sevenButton_Click"/>
         <Button x:Name="eightButton" Content="8" Grid.Row="2" Grid.Column="1" Margin="5"/>
         <Button x:Name="nineButton" Content="9" Grid.Row="2" Grid.Column="2" Margin="5"/>
         <Button x:Name="multiplyButton" Content="*" Grid.Row="2" Grid.Column="3" Margin="5"/>
