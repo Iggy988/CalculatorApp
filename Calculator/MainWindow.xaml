@@ -30,7 +30,7 @@
         <!---First row of buttons-->
         <Button x:Name="acButton" Content="AC" Grid.Row="1" Margin="5"/>
         <Button x:Name="minusButton" Content="+/-" Grid.Row="1" Grid.Column="1" Margin="5" Click="MinusButton_Click"/>
-        <Button x:Name="percentButton" Content="%" Grid.Row="1" Grid.Column="2" Margin="5"/>
+        <Button x:Name="percentButton" Content="%" Grid.Row="1" Grid.Column="2" Margin="5" Click="PercentButton_Click"/>
         <Button x:Name="divideButton" Content="/" Grid.Row="1" Grid.Column="3" Margin="5" Click="OperationButton_Click"/>
         <!---Second row of buttons-->
         <Button x:Name="sevenButton" Content="7" Grid.Row="2" Margin="5" Click="NumberButton_Click"/>
@@ -49,7 +49,7 @@
         <Button x:Name="plusButton" Content="+" Grid.Row="4" Grid.Column="3" Margin="5" Click="OperationButton_Click"/>
         <!---Fifth row of buttons-->
         <Button x:Name="nullButton" Content="0" Grid.Row="5" Margin="5" Grid.ColumnSpan="2" Click="NumberButton_Click"/>
-        <Button x:Name="dotButton" Content="." Grid.Row="5" Grid.Column="2" Margin="5"/>
-        <Button x:Name="equalsButton" Content="=" Grid.Row="5" Grid.Column="3" Margin="5"/>
+        <Button x:Name="dotButton" Content="." Grid.Row="5" Grid.Column="2" Margin="5" Click="dotButton_Click"/>
+        <Button x:Name="equalsButton" Content="=" Grid.Row="5" Grid.Column="3" Margin="5" Click="EqualsButton_Click"/>
     </Grid>
 </Window>
