@@ -15,9 +15,10 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        acButton.Click += AcButton_Click;
+        // u constructoru dodajemo eventHandlere za elemente samo kad ih nismo dodali u XAML kao Click="..."
+        //acButton.Click += AcButton_Click;
         //minusButton.Click += MinusButton_Click;
-        percentButton.Click += PercentButton_Click;
+        //percentButton.Click += PercentButton_Click;
         //equalsButton.Click += EqualsButton_Click;
     }
 
@@ -143,6 +144,11 @@ public class SimpleMath
     }
     public static double Divide(double n1, double n2)
     {
+        if (n2 == 0)
+        {
+            MessageBox.Show("Division by 0 is not supported", "Wrong operation", MessageBoxButton.OK, MessageBoxImage.Error);
+            return 0;
+        }
         return n1 / n2;
     }
 }
