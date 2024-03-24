@@ -18,7 +18,7 @@ public partial class MainWindow : Window
         acButton.Click += AcButton_Click;
         //minusButton.Click += MinusButton_Click;
         percentButton.Click += PercentButton_Click;
-        equalsButton.Click += EqualsButton_Click;
+        //equalsButton.Click += EqualsButton_Click;
     }
 
     private void EqualsButton_Click(object sender, RoutedEventArgs e)
