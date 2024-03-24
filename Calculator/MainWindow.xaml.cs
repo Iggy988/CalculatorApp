@@ -51,11 +51,19 @@ public partial class MainWindow : Window
 
     private void PercentButton_Click(object sender, RoutedEventArgs e)
     {
-        if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+        //50 + 5% (2.5) = 52.5
+        //80 + 10% (8) = 88
+        double tempNumber; //5, 8
+        if (double.TryParse(resultLabel.Content.ToString(), out tempNumber))
         {
-            lastNumber = lastNumber / 100;
-            resultLabel.Content = lastNumber.ToString();
+            tempNumber = (tempNumber / 100); // 5/100; 8/100
+            if (lastNumber != 0)
+            {
+                tempNumber *= lastNumber;   //0.05 * 50 = 2.5
+            }
+            resultLabel.Content = tempNumber.ToString();
         }
+        
     }
 
     private void MinusButton_Click(object sender, RoutedEventArgs e)
@@ -70,6 +78,8 @@ public partial class MainWindow : Window
     private void AcButton_Click(object sender, RoutedEventArgs e)
     {
         resultLabel.Content = "0";
+        result = 0;
+        lastNumber = 0;
     }
 
 
@@ -107,7 +117,13 @@ public partial class MainWindow : Window
     private void NumberButton_Click(object sender, RoutedEventArgs e)
     {
         int selectedValue = int.Parse((sender as Button).Content.ToString());
-
+        /*
+        if (sender == oneButton)
+            selectedValue = 1; 
+        if (sender == twoButton)
+            selectedValue = 2;
+        ...
+        */
         if (resultLabel.Content.ToString() == "0")
         {
             resultLabel.Content = $"{selectedValue}";
